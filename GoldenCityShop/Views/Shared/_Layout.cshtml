@@ -55,7 +55,6 @@
         Master.JavaScript();
         AjaxForm.EnableBootstrapStyleValidation();
         AjaxForm.EnablePostbackValidation();
-       
         Master.AutoComplete('@Url.Action(MVC.Search.ActionNames.AutoComplete, MVC.Search.Name)');
     </script>
     @RenderSection("JavaScript", required: false)

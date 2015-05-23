@@ -175,7 +175,7 @@ namespace GoldenCityShop.Areas.Admin.Controllers
                 }
                 if (file == null || file.ContentLength <= 0) continue;
                 const string uploadDir = "~/Uploads";
-                var fileName = Guid.NewGuid().ToString();
+                var fileName = Guid.NewGuid().ToString()+Path.GetExtension(file.FileName);
                 var imagePath = Path.Combine(Server.MapPath(uploadDir), fileName);
                 file.SaveAs(imagePath);
                 _pictureService.Add(new Picture { Path = fileName, FolderId = folderId });

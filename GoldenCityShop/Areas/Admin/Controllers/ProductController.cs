@@ -52,22 +52,22 @@ namespace GoldenCityShop.Areas.Admin.Controllers
         public virtual ActionResult Index()
         {
             //var list = new List<Product>();
-            //for (var i = 0; i < 10000; i++)
+            //for (var i = 0; i < 1000; i++)
             //{
             //    var product = new Product
             //    {
             //        Name = "محصول  " + i,
             //        ApplyCategoryDiscount = true,
-            //        CategoryId = 8,
+            //        CategoryId = 5,
             //        Deleted = false,
             //        IsFreeShipping = false,
-            //        Description = "salam kala  " + i,
+            //        Description = string.Format("کالای شماره {0}", i),
             //        DiscountPercent = 0,
             //        MetaDescription = "ljj",
             //        MetaKeyWords = "dlj",
             //        Price = i,
             //        NotificationStockMinimum = 1,
-            //        PrincipleImagePath = "/Uploads/b3c3efc9-f942-49ee-af41-19b7a05844e6شش.png",
+            //        PrincipleImagePath = "/Uploads/images.jpg",
             //        Ratio = 1,
             //        SellCount = 0,
             //        ViewCount = 0,
@@ -86,7 +86,7 @@ namespace GoldenCityShop.Areas.Admin.Controllers
         }
 
         [OutputCache(Location = OutputCacheLocation.None, NoStore = true, Duration = 0)]
-        public virtual ActionResult List(bool freeSend = false, bool deleted = false, string term = "", int page = 1, int count =10,
+        public virtual ActionResult List(bool freeSend = false, bool deleted = false, string term = "", int page = 1, int count = 10,
           Order order = Order.Descending, ProductOrderBy productOrderBy = ProductOrderBy.Name, long categoryId = 0, ProductType productType = ProductType.All)
         {
             #region Retrive Data

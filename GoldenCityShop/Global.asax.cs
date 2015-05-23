@@ -1,6 +1,5 @@
-﻿
+﻿using System.Data.Entity;
 using System;
-using System.Data.Entity;
 using System.Linq;
 using System.Security.Principal;
 using System.Web;
@@ -36,7 +35,8 @@ namespace GoldenCityShop
                 CaptchaUtils.CaptchaManager.StorageProvider = new CookieStorageProvider();
                 SetDbInitializer();
                 ControllerBuilder.Current.SetControllerFactory(new StructureMapControllerFactory());
-                LuceneProducts.CreateIndexes(SampleObjectFactory.Container.GetInstance<IProductService>().GetAllForAddLucene());
+                //LuceneProducts.CreateIndexes(SampleObjectFactory.Container.GetInstance<IProductService>().GetAllForAddLucene());
+
             }
             catch
             {
