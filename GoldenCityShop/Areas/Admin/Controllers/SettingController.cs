@@ -7,7 +7,6 @@ using System.Web;
 using System.Web.Mvc;
 using DataLayer.Context;
 using DomainClasses.Entities;
-using GoldenCitShop.Filters;
 using GoldenCityShop.Extentions;
 using GoldenCityShop.Helpers;
 using ServiceLayer.Interfaces;
@@ -15,6 +14,7 @@ using StructureMap.Building;
 using ViewModel.Admin;
 using ViewModel.Admin.Setting;
 using System.Web.UI;
+using GoldenCityShop.Filters;
 
 namespace GoldenCityShop.Areas.Admin.Controllers
 {

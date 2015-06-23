@@ -1,10 +1,10 @@
-namespace GoldenCityShop.ActionFilters
-{
-    using System;
-    using System.Web;
-    using System.Web.Mvc;
-    using System.Web.Routing;
+using System;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.Routing;
 
+namespace GoldenCityShop.Filters
+{
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, Inherited = true, AllowMultiple = false)]
     public class TurbolinksAttribute : FilterAttribute, IActionFilter
     {

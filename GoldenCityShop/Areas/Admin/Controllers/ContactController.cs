@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using GoldenCitShop.Filters;
+using GoldenCityShop.Filters;
 
 namespace GoldenCityShop.Areas.Admin.Controllers
 {

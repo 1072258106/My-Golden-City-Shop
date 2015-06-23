@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.UI.WebControls.WebParts;
-using GoldenCitShop.Filters;
+using GoldenCityShop.Filters;
 
 namespace GoldenCityShop.Areas.Admin.Controllers
 {

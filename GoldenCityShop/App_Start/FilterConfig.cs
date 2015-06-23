@@ -1,6 +1,4 @@
-﻿
-using GoldenCityShop.ActionFilters;
-using GoldenCityShop.Filters;
+﻿using GoldenCityShop.Filters;
 using System.Web;
 using System.Web.Mvc;
 

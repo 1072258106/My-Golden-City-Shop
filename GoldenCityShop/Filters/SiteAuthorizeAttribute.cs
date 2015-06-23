@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Net;
 using System.Web.Mvc;
-using System.Web.Security;
-using System.Web;
-namespace GoldenCitShop.Filters
+
+namespace GoldenCityShop.Filters
 {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, Inherited = true, AllowMultiple = true)]
     public sealed class SiteAuthorizeAttribute : AuthorizeAttribute

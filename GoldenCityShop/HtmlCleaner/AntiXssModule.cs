@@ -6,7 +6,6 @@ using System.Collections.Specialized;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Web;
-
 namespace GoldenCityShop.HtmlCleaner
 {
     public class AntiXssModule : IHttpModule
@@ -34,7 +33,7 @@ namespace GoldenCityShop.HtmlCleaner
             BindingFlags.Instance | BindingFlags.NonPublic);
 
         #endregion Fields
-       
+
         #region Methods (6)
 
         // Public Methods (2) 
@@ -45,12 +44,12 @@ namespace GoldenCityShop.HtmlCleaner
 
         public void Init(HttpApplication context)
         {
-            context.BeginRequest += cleanUpInput;
+            context.BeginRequest += CleanUpInput;
         }
 
         // Private Methods (4) 
 
-        private static void cleanUpAndEncodeCookies(HttpCookieCollection cookiesCollection)
+        private static void CleanUpAndEncodeCookies(HttpCookieCollection cookiesCollection)
         {
             foreach (string key in cookiesCollection.AllKeys)
             {
@@ -74,7 +73,7 @@ namespace GoldenCityShop.HtmlCleaner
             }
         }
 
-        private static void cleanUpAndEncodeFormFields(NameValueCollection formFieldsCollection)
+        private static void CleanUpAndEncodeFormFields(NameValueCollection formFieldsCollection)
         {
             ReadonlyProperty.SetValue(formFieldsCollection, false, null); //IsReadOnly=false
 
@@ -98,7 +97,7 @@ namespace GoldenCityShop.HtmlCleaner
             ReadonlyProperty.SetValue(formFieldsCollection, true, null); //IsReadOnly=true
         }
 
-        private static void cleanUpAndEncodeQueryStrings(NameValueCollection queryStringsCollection)
+        private static void CleanUpAndEncodeQueryStrings(NameValueCollection queryStringsCollection)
         {
             ReadonlyProperty.SetValue(queryStringsCollection, false, null); //IsReadOnly=false
 
@@ -120,18 +119,18 @@ namespace GoldenCityShop.HtmlCleaner
             ReadonlyProperty.SetValue(queryStringsCollection, true, null); //IsReadOnly=true
         }
 
-        private static void cleanUpInput(object sender, EventArgs e)
+        private static void CleanUpInput(object sender, EventArgs e)
         {
             HttpRequest request = ((HttpApplication)sender).Request;
 
-            cleanUpAndEncodeQueryStrings(request.QueryString);
+            CleanUpAndEncodeQueryStrings(request.QueryString);
 
             if (request.HttpMethod == "POST")
             {
-                cleanUpAndEncodeFormFields(request.Form);
+                CleanUpAndEncodeFormFields(request.Form);
             }
 
-            cleanUpAndEncodeCookies(request.Cookies);
+            CleanUpAndEncodeCookies(request.Cookies);
         }
 
         #endregion Methods

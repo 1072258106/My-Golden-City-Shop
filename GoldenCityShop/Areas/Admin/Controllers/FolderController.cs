@@ -8,10 +8,10 @@ using System.Web.Mvc;
 using System.Web.UI;
 using DataLayer.Context;
 using DomainClasses.Entities;
-using GoldenCitShop.Filters;
 using ServiceLayer.Interfaces;
 using ViewModel.Admin.Folder;
 using System.Threading.Tasks;
+using GoldenCityShop.Filters;
 
 namespace GoldenCityShop.Areas.Admin.Controllers
 {

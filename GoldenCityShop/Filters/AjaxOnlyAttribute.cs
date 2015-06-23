@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.Mvc;
 
-namespace GoldenCitShop.Filters
+namespace GoldenCityShop.Filters
 {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
     public sealed class AjaxOnlyAttribute : ActionFilterAttribute

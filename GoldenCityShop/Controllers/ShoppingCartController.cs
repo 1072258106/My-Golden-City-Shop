@@ -5,8 +5,8 @@ using System.Web.Mvc;
 using System.Web.UI;
 using DataLayer.Context;
 using DomainClasses.Entities;
-using GoldenCitShop.Filters;
 using GoldenCityShop.Extentions;
+using GoldenCityShop.Filters;
 using ServiceLayer.Interfaces;
 
 namespace GoldenCityShop.Controllers

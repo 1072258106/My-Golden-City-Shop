@@ -238,6 +238,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\PreApplicationStart.cs" />
     <Compile Include="BaseController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
@@ -261,6 +262,7 @@
     <Compile Include="FeedController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
+    <Compile Include="Filters\DosAttackModule.cs" />
     <Compile Include="Filters\ForceWww.cs" />
     <Compile Include="Filters\TurbolinksAttribute.cs" />
     <Compile Include="Admin.CategoryController.generated.cs">

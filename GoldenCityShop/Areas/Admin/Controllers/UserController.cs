@@ -8,7 +8,7 @@ using System.Web.UI;
 using DataLayer.Context;
 using DomainClasses.Entities;
 using DomainClasses.Enums;
-using GoldenCitShop.Filters;
+using GoldenCityShop.Filters;
 using GoldenCityShop.Helpers;
 using ServiceLayer.Interfaces;
 using Utilities.Security;

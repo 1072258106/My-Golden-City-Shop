@@ -5,12 +5,12 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using DataLayer.Context;
-using GoldenCitShop.Filters;
 using GoldenCityShop.Extentions;
 using GoldenCityShop.HtmlCleaner;
 using ServiceLayer.Interfaces;
 using ViewModel.Admin.Page;
 using System.Threading.Tasks;
+using GoldenCityShop.Filters;
 
 namespace GoldenCityShop.Areas.Admin.Controllers
 {

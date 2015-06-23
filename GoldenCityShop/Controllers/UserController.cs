@@ -8,7 +8,7 @@ using CaptchaMvc.HtmlHelpers;
 using DataLayer.Context;
 using DomainClasses.Entities;
 using DomainClasses.Enums;
-using GoldenCitShop.Filters;
+using GoldenCityShop.Filters;
 using ServiceLayer.Interfaces;
 using Utilities.Security;
 using ViewModel;
