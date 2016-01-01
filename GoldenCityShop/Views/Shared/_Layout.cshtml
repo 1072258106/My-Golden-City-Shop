@@ -23,10 +23,7 @@
     @Scripts.Render("~/bundles/modernizr")
     @Styles.Render("~/Search/css")
     @RenderSection("css", required: false)
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/masterjs")
-    @Scripts.Render("~/bundles/jqueryval")
-    @Scripts.Render("~/customerBundle/js")
+
 
 </head>
 <body id="body">
@@ -49,6 +46,13 @@
     <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
     </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/masterjs")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/customerBundle/js")
+    @RenderSection("JavaScript", required: false)
+    @StackExchange.Profiling.MiniProfiler.RenderIncludes()
     <script>
         Home.RatingAndSlider();
         Public.Routin();
@@ -57,8 +61,7 @@
         AjaxForm.EnablePostbackValidation();
         Master.AutoComplete('@Url.Action(MVC.Search.ActionNames.AutoComplete, MVC.Search.Name)');
     </script>
-    @RenderSection("JavaScript", required: false)
-    @StackExchange.Profiling.MiniProfiler.RenderIncludes()
+
 </body>
 
 </html>

@@ -39,10 +39,11 @@ namespace GoldenCityShop
                 "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/masterjs").Include(
+                
+                "~/Scripts/respond.js",
                 "~/Scripts/sweet-alert.min.js",
                 "~/Scripts/site.js",
                 "~/Scripts/bootstrap.min.js",
-                "~/Scripts/slideshowMini.js",
                 "~/Scripts/jquery-MVC-RemoveRow.js",
                  "~/Scripts/sweet-alert.min.js",
                 "~/Scripts/jquery.autocomplete.min.js",
@@ -52,8 +53,7 @@ namespace GoldenCityShop
                 "~/Scripts/jquery.sliderPro.min.js",
                 "~/Scripts/bootstrap-select.min.js",
                 "~/Scripts/noty/packaged/jquery.noty.packaged.min.js",
-                "~/Scripts/lazysizes.min.js",
-                "~/Scripts/respond.js"));
+                "~/Scripts/lazysizes.min.js"));
             bundles.Add(new StyleBundle("~/fileinp/css").Include(
                "~/Content/fileinput.min.css"
                ));

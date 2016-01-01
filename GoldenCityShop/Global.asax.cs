@@ -35,7 +35,7 @@ namespace GoldenCityShop
                 CaptchaUtils.CaptchaManager.StorageProvider = new CookieStorageProvider();
                 SetDbInitializer();
                 ControllerBuilder.Current.SetControllerFactory(new StructureMapControllerFactory());
-                //LuceneProducts.CreateIndexes(SampleObjectFactory.Container.GetInstance<IProductService>().GetAllForAddLucene());
+               // LuceneProducts.CreateIndexes(SampleObjectFactory.Container.GetInstance<IProductService>().GetAllForAddLucene());
 
             }
             catch
@@ -93,6 +93,7 @@ namespace GoldenCityShop
 
         private static void SetDbInitializer()
         {
+            //Database.SetInitializer<ShopDbContext>(null);
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<ShopDbContext, Configuration>());
             SampleObjectFactory.Container.GetInstance<IUnitOfWork>().ForceDatabaseInitialize();
         }

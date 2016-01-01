@@ -15,8 +15,8 @@ namespace GoldenCityShop
     {
         public static void Start()
         {
-            DynamicModuleUtility.RegisterModule(typeof(DosAttackModule));
-            DynamicModuleUtility.RegisterModule(typeof(AntiXssModule));
+            //DynamicModuleUtility.RegisterModule(typeof(DosAttackModule));
+            //DynamicModuleUtility.RegisterModule(typeof(AntiXssModule));
         }
     }
 }

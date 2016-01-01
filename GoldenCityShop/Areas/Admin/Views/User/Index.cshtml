@@ -34,31 +34,33 @@
 
 @section JavaScript
 {
-    <script>
-        $(function () {
-            $(document).on("click", "span[id^='row']", function (e) {
-                e.stopPropagation();
-                var span = $(this);
-                var id = span.attr('id').replace('row-', '');
-                swal({
-                        title: "آیا مطمئن هستید؟",
-                        type: "warning",
-                        showCancelButton: true,
-                        confirmButtonClass: "btn btn-md btn-danger",
-                        confirmButtonText: "بله",
-                        cancelButtonText: "انصراف",
-                        closeOnConfirm: false
-                    },
-                    function (confirmed) {
-                        if (confirmed) {
-                            span.parent().parent().MVCDeleteRow({
-                                'postUrl': '@postUrl',
-                                'id': id
-                            });
-                            swal("", "رکورد مورد نظر حذف شد", "success");
-                        }
-                    });
-            });
-        });
-    </script>
+   <script>
+      
+           $(document).on("click", "span[id^='row']", function (e) {
+          
+               e.stopPropagation();
+               var span = $(this);
+               var id = span.attr('id').replace('row-', '');
+               swal({
+                   title: "آیا مطمئن هستید؟",
+                   type: "warning",
+                   showCancelButton: true,
+                   confirmButtonClass: "btn btn-md btn-danger",
+                   confirmButtonText: "بله",
+                   cancelButtonText: "انصراف",
+                   closeOnConfirm: false
+               },
+                   function (confirmed) {
+                       if (confirmed) {
+                           span.parent().parent().MVCDeleteRow({
+                               'postUrl': '@postUrl',
+                               'id': id
+                           });
+                           swal("", "رکورد مورد نظر حذف شد", "success");
+                       }
+                   });
+           });
+      
+</script>
+
 }

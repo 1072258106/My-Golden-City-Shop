@@ -58,7 +58,7 @@ namespace GoldenCityShop.Areas.Admin.Controllers
             //    {
             //        Name = "محصول  " + i,
             //        ApplyCategoryDiscount = true,
-            //        CategoryId = 5,
+            //        CategoryId = 12,
             //        Deleted = false,
             //        IsFreeShipping = false,
             //        Description = string.Format("کالای شماره {0}", i),
